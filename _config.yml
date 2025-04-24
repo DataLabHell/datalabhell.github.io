@@ -1,13 +1,20 @@
 permalink: pretty
 
 title: Blog Lab Hell
-tagline: A Collection of Programming Ramblings by chjdev
+tagline: Blog of Data Lab Hell Gmbh
 description: Blog of Data Lab Hell Gmbh
 url: https://datalabhell.at
 paginate: 6
 paginate_path: "/blog/page:num/"
 baseurl: ""
+lsi: true
+highlighter: rouge
+gist:
+  noscript: false
 markdown: kramdown
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
 theme: minima          # GitHub‑hosted default theme
 plugins:
   - jekyll-feed
