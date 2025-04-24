@@ -1,0 +1,18 @@
+permalink: pretty
+
+title: Blog Lab Hell
+tagline: A Collection of Programming Ramblings by chjdev
+description: Blog of Data Lab Hell Gmbh
+url: https://datalabhell.at
+paginate: 6
+paginate_path: "/blog/page:num/"
+baseurl: ""
+markdown: kramdown
+theme: minima          # GitHub‑hosted default theme
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-sitemap
+
