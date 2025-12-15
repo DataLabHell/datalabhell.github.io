@@ -67,7 +67,7 @@ ruby -v  # Should show ruby 3.2.0
 
 ```sh
 # Clone the repository (if not already done)
-git clone https://github.com/yourusername/datalabhell.github.io.git
+git clone https://github.com/DataLabHell/datalabhell.github.io.git
 cd datalabhell.github.io
 
 # Install bundler
