@@ -1,0 +1,40 @@
+(function () {
+  var STORAGE_KEY = 'dlh_cookie_consent';
+
+  // Wire up any revoke links on the page
+  document.querySelectorAll('[data-cc-revoke]').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      localStorage.removeItem(STORAGE_KEY);
+      showBanner();
+    });
+  });
+
+  if (localStorage.getItem(STORAGE_KEY)) return;
+
+  showBanner();
+
+  function showBanner() {
+    if (document.getElementById('cookie-banner')) return;
+  var banner = document.createElement('div');
+  banner.id = 'cookie-banner';
+  banner.innerHTML =
+    '<div class="cc-inner">' +
+      '<div class="cc-text">' +
+        '<strong>Datenschutzhinweis</strong>' +
+        '<p>Diese Website verwendet ausschließlich technisch notwendige Cookies. Es werden keine Tracking- oder Analyse-Cookies eingesetzt. Weitere Informationen finden Sie in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</p>' +
+      '</div>' +
+      '<div class="cc-actions">' +
+        '<button id="cc-accept">Verstanden</button>' +
+      '</div>' +
+    '</div>';
+
+  document.body.appendChild(banner);
+
+  document.getElementById('cc-accept').addEventListener('click', function () {
+    localStorage.setItem(STORAGE_KEY, '1');
+    banner.classList.add('cc-hidden');
+    setTimeout(function () { banner.remove(); }, 400);
+  });
+  } // end showBanner
+})();
