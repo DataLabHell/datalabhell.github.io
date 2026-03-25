@@ -102,6 +102,12 @@ nav a:hover {
   color: var(--white);
 }
 
+nav a[aria-current="page"] {
+  color: var(--white);
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 2px;
+}
+
 /* ── HERO ────────────────────────────────── */
 .hero {
   position: relative;
