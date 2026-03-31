@@ -1,13 +1,13 @@
 (function () {
   var STORAGE_KEY = 'dlh_cookie_consent';
 
-  // Wire up any revoke links on the page
-  document.querySelectorAll('[data-cc-revoke]').forEach(function (el) {
-    el.addEventListener('click', function (e) {
+  // Wire up any revoke links on the page (delegated so it works with dynamic footer)
+  document.addEventListener('click', function (e) {
+    if (e.target.closest('[data-cc-revoke]')) {
       e.preventDefault();
       localStorage.removeItem(STORAGE_KEY);
       showBanner();
-    });
+    }
   });
 
   if (localStorage.getItem(STORAGE_KEY)) return;

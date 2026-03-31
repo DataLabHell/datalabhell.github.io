@@ -1,165 +1,563 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Data Lab Hell</title>
-  <meta name="description" content="Data Lab Hell – an extra-university R&D Incubator & Innovation Lab based in Austria." />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Lab Hell</title>
+    <meta
+      name="description"
+      content="Data Lab Hell – an extra-university R&D Incubator & Innovation Lab based in Austria."
+    />
+    <link rel="icon" href="static/brand/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="components.js" defer></script>
+  </head>
+  <body>
+    <header></header>
 
-  <header>
-    <div class="container">
-      <a class="logo" href="index.html">
-        <img src="static/LOGO_DLH.svg" alt="Data Lab Hell" />
-      </a>
-      <nav>
-        <a href="index.html" aria-current="page">Home</a>
-        <a href="research.html">Research</a>
-        <a href="team.html">Team</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Igniting Data-Driven Innovation</h1>
-      <h1>A Research and Technology Organisation</h1>
-      <a href="research.html" class="btn-outline">Explore Research</a>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section class="content-section">
-    <div class="container two-col">
-      <div>
-        <p class="section-label">About DLH</p>
-        <h2>Built on research.<br />Driven by data.</h2>
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <img
+          src="static/brand/LOGO_DLH.svg"
+          alt="Data Lab Hell"
+          class="hero-logo"
+        />
+        <h1>Igniting Data-Driven Innovation</h1>
+        <h1>A Research and Technology Organisation</h1>
+        <a href="#research" class="btn-outline">Explore</a>
       </div>
-      <div>
-        <p>Das Data Lab Hell (DLH) ist eine außeruniversitäre Forschungseinrichtung und als R&amp;D Incubator &amp; Innovation Lab in seiner Form einzigartig. Wir sind nicht gewinnorientiert, d.h. wir reinvestieren unseren Gewinn zur Gänze in F&amp;E, und betreiben anwendungsorientierte Forschung und Entwicklung konsequent als Kooperationspartner.</p>
-        <p>Vielfältige datenbasierte Methoden für industrielle Anwendungen, dezentrale und adaptive Algorithmen sowie innovative mathematische, physikalische und algorithmische Modelle erfordern ein höchst interdisziplinäres Umfeld. Das spiegelt sich in unserem Team wider: Mathematiker:innen, Statistiker:innen, Informatiker:innen und Physiker:innen arbeiten gemeinsam an neuen theoretischen Modellen, experimentellen Plattformen und innovativen Forschungsansätzen.</p>
-        <p>DLH ist ein einzigartiger Raum, in dem datengetriebene Innovation nicht nur gedacht wird, sondern zündet – wir leben „Igniting Data-Driven Innovation".</p>
-        <a href="team.html" class="btn-text">Das Team kennenlernen →</a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- What we do -->
-  <section class="rd-section">
-    <div class="container">
-      <div class="rd-header">
-        <p class="section-label">What we do</p>
-        <h2>Research &amp; Development</h2>
+    <!-- About -->
+    <section class="content-section" id="about">
+      <div class="container two-col">
+        <div>
+          <p class="section-label">About DLH</p>
+          <h2>Built on research.<br />Driven by data.</h2>
+        </div>
+        <div>
+          <p>
+            Das Data Lab Hell (DLH) ist eine
+            <strong>außeruniversitäre Forschungseinrichtung</strong> und als
+            <strong>R&amp;D Incubator &amp; Innovation Lab</strong> in seiner
+            Form einzigartig. Wir sind
+            <strong>nicht gewinnorientiert,</strong> d.h. wir reinvestieren
+            unseren Gewinn zur Gänze in F&amp;E, und betreiben
+            <strong>anwendungsorientierte Forschung und Entwicklung</strong>
+            konsequent als <strong>Kooperationspartner</strong>.
+          </p>
+          <p>
+            Vielfältige datenbasierte Methoden für industrielle Anwendungen,
+            dezentrale und adaptive Algorithmen sowie innovative mathematische,
+            physikalische und algorithmische Modelle erfordern ein höchst
+            <strong>interdisziplinäres Umfeld</strong>. Das spiegelt sich in
+            unserem <strong>Team</strong> wider: Mathematiker:innen,
+            Statistiker:innen, Informatiker:innen und Physiker:innen arbeiten
+            gemeinsam an neuen theoretischen Modellen, experimentellen
+            Plattformen und innovativen Forschungsansätzen.
+          </p>
+          <p>
+            DLH ist ein <strong>einzigartiger Raum</strong>, in dem
+            <strong>datengetriebene Innovation</strong> nicht nur gedacht wird,
+            sondern <strong>zündet</strong> – wir leben „Igniting Data-Driven
+            Innovation".
+          </p>
+          <a href="#team" class="btn-text">Meet the People →</a>
+        </div>
       </div>
-      <div class="rd-list">
-        <div class="rd-item">
-          <span class="rd-num">01</span>
-          <div class="rd-body">
-            <h3>Datenbasierte Methoden</h3>
-            <p>Vielfältige datenbasierte Methoden für industrielle Anwendungen.</p>
+    </section>
+
+    <!-- Research & Development -->
+    <section class="rd-section" id="research">
+      <div class="container">
+        <div class="rd-header">
+          <p class="section-label">What we do</p>
+          <h2>Research &amp; Development</h2>
+          <p class="rd-approach-text">
+            Wir arbeiten an der Schnittstelle von Wissenschaft und Industrie —
+            mit der Tiefe einer Forschungseinrichtung und der Agilität eines
+            Startups — ohne eines zu sein.
+          </p>
+        </div>
+        <div class="rd-list">
+          <div class="rd-item">
+            <span class="rd-num">01</span>
+            <div class="rd-body">
+              <h3>Datenbasierte Methoden</h3>
+              <p>
+                Vielfältige datenbasierte Methoden für industrielle Anwendungen.
+              </p>
+            </div>
           </div>
-          <a href="research.html" class="rd-arrow">→</a>
-        </div>
-        <div class="rd-item">
-          <span class="rd-num">02</span>
-          <div class="rd-body">
-            <h3>Dezentrale &amp; adaptive Algorithmen</h3>
-            <p>Entwicklung dezentraler und adaptiver Algorithmen für komplexe reale Systeme.</p>
+          <div class="rd-item">
+            <span class="rd-num">02</span>
+            <div class="rd-body">
+              <h3>Dezentrale &amp; adaptive Algorithmen</h3>
+              <p>
+                Entwicklung dezentraler und adaptiver Algorithmen für komplexe
+                reale Systeme.
+              </p>
+            </div>
           </div>
-          <a href="research.html" class="rd-arrow">→</a>
-        </div>
-        <div class="rd-item">
-          <span class="rd-num">03</span>
-          <div class="rd-body">
-            <h3>Mathematische &amp; physikalische Modelle</h3>
-            <p>Innovative mathematische, physikalische und algorithmische Modelle für neue Problemstellungen.</p>
+          <div class="rd-item">
+            <span class="rd-num">03</span>
+            <div class="rd-body">
+              <h3>Mathematische &amp; physikalische Modelle</h3>
+              <p>
+                Innovative mathematische, physikalische und algorithmische
+                Modelle für neue Problemstellungen.
+              </p>
+            </div>
           </div>
-          <a href="research.html" class="rd-arrow">→</a>
-        </div>
-        <div class="rd-item">
-          <span class="rd-num">04</span>
-          <div class="rd-body">
-            <h3>Theoretische Modelle</h3>
-            <p>Gemeinsame Arbeit an neuen theoretischen Modellen in einem interdisziplinären Umfeld.</p>
+          <div class="rd-item">
+            <span class="rd-num">04</span>
+            <div class="rd-body">
+              <h3>Theoretische Modelle</h3>
+              <p>
+                Gemeinsame Arbeit an neuen theoretischen Modellen in einem
+                interdisziplinären Umfeld.
+              </p>
+            </div>
           </div>
-          <a href="research.html" class="rd-arrow">→</a>
-        </div>
-        <div class="rd-item">
-          <span class="rd-num">05</span>
-          <div class="rd-body">
-            <h3>Experimentelle Plattformen</h3>
-            <p>Aufbau und Betrieb experimenteller Plattformen für anwendungsorientierte Forschung.</p>
+          <div class="rd-item">
+            <span class="rd-num">05</span>
+            <div class="rd-body">
+              <h3>Experimentelle Plattformen</h3>
+              <p>
+                Aufbau und Betrieb experimenteller Plattformen für
+                anwendungsorientierte Forschung.
+              </p>
+            </div>
           </div>
-          <a href="research.html" class="rd-arrow">→</a>
-        </div>
-        <div class="rd-item">
-          <span class="rd-num">06</span>
-          <div class="rd-body">
-            <h3>Innovative Forschungsansätze</h3>
-            <p>Entwicklung innovativer Forschungsansätze an der Schnittstelle von Wissenschaft und Industrie.</p>
+          <div class="rd-item">
+            <span class="rd-num">06</span>
+            <div class="rd-body">
+              <h3>Innovative Forschungsansätze</h3>
+              <p>
+                Entwicklung innovativer Forschungsansätze an der Schnittstelle
+                von Wissenschaft und Industrie.
+              </p>
+            </div>
           </div>
-          <a href="research.html" class="rd-arrow">→</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Team preview -->
-  <section class="content-section">
-    <div class="container">
-      <p class="section-label">DLH Team</p>
-      <h2>The People</h2>
-      <div class="team-grid" style="margin-top:2.5rem;">
-        <div class="team-member">
-          <img src="static/tohe.webp" alt="Tobias Hell" />
-          <strong>Tobias Hell</strong>
-          <span>CEO &amp; Founder</span>
-        </div>
-        <div class="team-member">
-          <img src="static/chju.png" alt="Christian Junker" />
-          <strong>Christian Junker</strong>
-          <span>CTO</span>
-        </div>
-        <div class="team-member">
-          <img src="static/daba.png" alt="Daniel Baldauf" />
-          <strong>Daniel Baldauf</strong>
-          <span>CIO</span>
-        </div>
-        <div class="team-member">
-          <img src="static/daha.png" alt="Daniel Hauser" />
-          <strong>Daniel Hauser</strong>
-          <span>CINO</span>
-        </div>
-      </div>
-      <div style="text-align:center; margin-top:2.5rem;">
-        <a href="team.html" class="btn-outline dark">Alle Teammitglieder</a>
-      </div>
-    </div>
-  </section>
+    <!-- Team -->
+    <section class="content-section" id="team">
+      <div class="container">
+        <p class="section-label">DLH Team</p>
+        <h2>The People</h2>
+        <p class="section-intro" style="margin-top: 0.5rem">
+          Ein interdisziplinäres Team aus Mathematiker:innen, Statistiker:innen,
+          Informatiker:innen und Physiker:innen.
+        </p>
+        <!-- C-level always visible -->
+        <div class="team-grid" style="margin-top: 2.5rem">
+          <div class="team-member">
+            <img src="static/people/tohe.png" alt="Tobias Hell" />
+            <strong>Tobias Hell</strong>
+            <span>CEO &amp; Founder</span>
+          </div>
 
-  <footer>
-    <div class="container footer-bottom-inner">
-      <div class="footer-social">
-        <a href="https://github.com/DataLabHell" target="_blank" rel="noopener" aria-label="GitHub">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.216.694.825.576C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/company/data-lab-hell-gmbh" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        </a>
-      </div>
-      <nav class="footer-legal">
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
-        <a href="#" data-cc-revoke>Einwilligungen widerrufen</a>
-      </nav>
-      <p class="copy">© 2026 Data Lab Hell GmbH · Zirl, Austria</p>
-    </div>
-  </footer>
+          <div class="team-member">
+            <img src="static/people/chju.png" alt="Christian Junker" />
+            <strong>Christian Junker</strong>
+            <span>CTO – Chief Technology Officer</span>
+          </div>
 
-  <script src="cookie-consent.js"></script>
-</body>
+          <div class="team-member">
+            <img src="static/people/daba.png" alt="Daniel Baldauf" />
+            <strong>Daniel Baldauf</strong>
+            <span>CIO – Chief Information Officer</span>
+          </div>
+
+          <div class="team-member">
+            <img src="static/people/daha.png" alt="Daniel Hauser" />
+            <strong>Daniel Hauser</strong>
+            <span>CINO – Chief Innovation Officer</span>
+          </div>
+        </div>
+
+        <!-- Remaining team — collapsed by default -->
+        <div
+          id="team-expanded"
+          class="team-grid"
+          style="margin-top: 1.5rem; display: none"
+        >
+          <div class="team-member">
+            <img src="static/people/stan.png" alt="Stephan Antholzer" />
+            <strong>Stephan Antholzer</strong>
+            <span></span>
+          </div>
+
+          <div class="team-member">
+            <img src="static/people/chle.png" alt="Lee Chhong Shing" />
+            <strong>Lee Chhong Shing</strong>
+            <span></span>
+          </div>
+
+          <div class="team-member">
+            <img src="static/people/tode.png" alt="Tobias Deutschmann" />
+            <strong>Tobias Deutschmann</strong>
+            <span></span>
+          </div>
+
+          <div class="team-member">
+            <img src="static/people/elhe.png" alt="Elisabeth Hell" />
+            <strong>Elisabeth Hell</strong>
+            <span>Projektmanagement</span>
+          </div>
+
+          <div class="team-member">
+            <img src="static/people/chlu.png" alt="Christian Lumper" />
+            <strong>Christian Lumper</strong>
+            <span>VP of Engineering</span>
+          </div>
+
+          <div class="team-member">
+            <img src="static/people/sima.png" alt="Simon Margreiter" />
+            <strong>Simon Margreiter</strong>
+            <span></span>
+          </div>
+
+          <div class="team-member">
+            <img src="static/people/alno.png" alt="Albert Nössig" />
+            <strong>Albert Nössig</strong>
+            <span></span>
+          </div>
+
+          <div class="team-member">
+            <img src="static/people/flpe.png" alt="Florian Peter" />
+            <strong>Florian Peter</strong>
+            <span></span>
+          </div>
+
+          <div class="team-member">
+            <img src="static/people/misa.png" alt="Michael Sandbichler" />
+            <strong>Michael Sandbichler</strong>
+            <span></span>
+          </div>
+
+          <div class="team-member">
+            <img src="static/people/josc.png" alt="Jonas Schöpf" />
+            <strong>Jonas Schöpf</strong>
+            <span></span>
+          </div>
+
+          <div class="team-member">
+            <img src="static/people/josa.png" alt="Johannes Sappl" />
+            <strong>Johannes Sappl</strong>
+            <span></span>
+          </div>
+
+          <div class="team-member">
+            <img src="static/people/lisc.png" alt="Lisa Schlosser" />
+            <strong>Lisa Schlosser</strong>
+            <span></span>
+          </div>
+
+          <div class="team-member">
+            <img src="static/people/misp.png" alt="Michael Sperk" />
+            <strong>Michael Sperk</strong>
+            <span></span>
+          </div>
+
+          <div class="team-member">
+            <img src="static/people/gesp.png" alt="Georg Spielberger" />
+            <strong>Georg Spielberger</strong>
+            <span></span>
+          </div>
+
+          <div class="team-member">
+            <img src="static/people/sast.png" alt="Sandra Steixner" />
+            <strong>Sandra Steixner</strong>
+            <span></span>
+          </div>
+
+          <div class="team-member">
+            <img src="static/people/pits.png" alt="Pia Tscholl" />
+            <strong>Pia Tscholl</strong>
+            <span></span>
+          </div>
+
+          <div class="team-member">
+            <img src="static/people/pawi.png" alt="Patrick Wilhelm" />
+            <strong>Patrick Wilhelm</strong>
+            <span></span>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem">
+          <button class="btn-outline dark" id="team-toggle">
+            Alle Teammitglieder anzeigen ↓
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kooperationen -->
+    <section class="content-section gray" id="kooperationen">
+      <div class="container">
+        <p class="section-label">Partner</p>
+        <h2>Collaborations</h2>
+        <p
+          class="section-intro"
+          style="margin-top: 0.5rem; margin-bottom: 2.5rem"
+        >
+          Wir betreiben angewandte Forschung und Entwicklung konsequent als
+          Kooperationspartner — gemeinsam mit führenden Unternehmen und
+          Forschungseinrichtungen. Eine Auswahl unserer bisherigen
+          Kooperationspartner:
+        </p>
+      </div>
+
+      <div class="ticker-wrap ticker-wrap--inset">
+        <div class="ticker-track">
+          <div class="ticker-inner">
+            <a
+              class="ticker-item"
+              href="https://www.egger.com"
+              target="_blank"
+              rel="noopener"
+              ><img src="static/companies/egger.svg" alt="Egger"
+            /></a>
+            <a
+              class="ticker-item"
+              href="https://www.allianz.at"
+              target="_blank"
+              rel="noopener"
+              ><img src="static/companies/allianz.svg" alt="Allianz"
+            /></a>
+            <a
+              class="ticker-item"
+              href="https://www.tiwag.at"
+              target="_blank"
+              rel="noopener"
+              ><img src="static/companies/tiwag.png" alt="TIWAG"
+            /></a>
+            <a
+              class="ticker-item"
+              href="https://www.geosphere.at/"
+              target="_blank"
+              rel="noopener"
+              ><img
+                src="static/companies/geosphere.svg"
+                alt="GeoSphere Austria"
+            /></a>
+            <a
+              class="ticker-item"
+              href="https://www.i-med.ac.at"
+              target="_blank"
+              rel="noopener"
+              ><img
+                src="static/companies/mui.svg"
+                alt="Medizinische Universität Innsbruck"
+            /></a>
+            <a
+              class="ticker-item"
+              href="https://www.plansee.com"
+              target="_blank"
+              rel="noopener"
+              ><img src="static/companies/plansee.webp" alt="Plansee SE"
+            /></a>
+            <a
+              class="ticker-item"
+              href="https://www.tyrolit.com"
+              target="_blank"
+              rel="noopener"
+              ><img src="static/companies/tyrolit.svg" alt="Tyrolit"
+            /></a>
+            <a
+              class="ticker-item"
+              href="https://www.lindner-traktoren.at"
+              target="_blank"
+              rel="noopener"
+              ><img src="static/companies/lindner.svg" alt="Lindner"
+            /></a>
+            <a
+              class="ticker-item"
+              href="https://www.uibk.ac.at/"
+              target="_blank"
+              rel="noopener"
+              ><img
+                src="static/companies/universitaet-innsbruck.jpg"
+                alt="Universität Innsbruck"
+            /></a>
+            <a
+              class="ticker-item"
+              href="https://www.ceratizit.com"
+              target="_blank"
+              rel="noopener"
+              ><img src="static/companies/ceratizit.svg" alt="Ceratizit"
+            /></a>
+            <a
+              class="ticker-item"
+              href="https://www.tinetz.at/"
+              target="_blank"
+              rel="noopener"
+              ><img src="static/companies/tinetz.png" alt="Tinetz"
+            /></a>
+            <a
+              class="ticker-item"
+              href="https://powunity.com/"
+              target="_blank"
+              rel="noopener"
+              ><img src="static/companies/powunity.svg" alt="Powunity"
+            /></a>
+            <a
+              class="ticker-item"
+              href="https://plansee-group.com/"
+              target="_blank"
+              rel="noopener"
+              ><img
+                src="static/companies/plansee-group.svg"
+                alt="Plansee Group"
+            /></a>
+            <a
+              class="ticker-item"
+              href="https://www.msq.at/"
+              target="_blank"
+              rel="noopener"
+              ><img src="static/companies/mediasquad.png" alt="Mediasquad"
+            /></a>
+            <a
+              class="ticker-item"
+              href="https://www.ingconsult.at/"
+              target="_blank"
+              rel="noopener"
+              ><img src="static/companies/ingconsult.jpg" alt="ING Consult"
+            /></a>
+            <a
+              class="ticker-item"
+              href="https://www.curacosmeticsgroup.com/"
+              target="_blank"
+              rel="noopener"
+              ><img
+                src="static/companies/curamarketing.svg"
+                alt="Cura Marketing"
+            /></a>
+            <a
+              class="ticker-item"
+              href="https://www.thoeni.com/"
+              target="_blank"
+              rel="noopener"
+              ><img src="static/companies/thoeni.png" alt="Thöni"
+            /></a>
+            <a
+              class="ticker-item"
+              href="https://biocrates.com/"
+              target="_blank"
+              rel="noopener"
+              ><img src="static/companies/biocrates.png" alt="Biocrates"
+            /></a>
+            <a
+              class="ticker-item"
+              href="https://www.gutmann.cc/"
+              target="_blank"
+              rel="noopener"
+              ><img src="static/companies/gutmann.svg" alt="Gutmann"
+            /></a>
+            <a
+              class="ticker-item"
+              href="https://www.fwf.ac.at/"
+              target="_blank"
+              rel="noopener"
+              ><img src="static/companies/fwf.svg" alt="FWF"
+            /></a>
+            <a
+              class="ticker-item"
+              href="https://lawinen.report/"
+              target="_blank"
+              rel="noopener"
+              ><img src="static/companies/lwd.svg" alt="LWD Tirol"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="content-section" id="contact">
+      <div class="container">
+        <div class="contact-header">
+          <p class="section-label">Contact</p>
+          <h2>Get in Touch</h2>
+          <p class="contact-intro">
+            Wir arbeiten gerne gemeinsam an Herausforderungen, sind neugierig
+            und offen für neue Perspektiven. Der Austausch mit Partnern aus
+            Industrie und Wissenschaft ist uns wichtig. Wenn die Chemie stimmt,
+            entstehen daraus langfristige Kooperationen.
+          </p>
+        </div>
+
+        <div class="contact-details">
+          <div class="contact-detail-item">
+            <h3>Email</h3>
+            <p>
+              <a href="mailto:office@datalabhell.at">office@datalabhell.at</a>
+            </p>
+          </div>
+          <div class="contact-detail-item">
+            <h3>Büro</h3>
+            <p><a href="tel:+436776175730">+43 677 617 573 00</a></p>
+            <h3 style="margin-top: 1.25rem">Geschäftsführung</h3>
+            <p><a href="tel:+436776175731">+43 677 617 573 01</a></p>
+          </div>
+          <div class="contact-detail-item">
+            <h3>Firmensitz</h3>
+            <p>Europastraße 2a<br />6170 Zirl</p>
+            <h3 style="margin-top: 1.25rem">Zweigniederlassung</h3>
+            <p>Bahnhofstraße 37<br />6300 Wörgl</p>
+          </div>
+          <div class="contact-detail-item contact-social">
+            <h3>Follow</h3>
+            <div class="contact-social-links">
+              <a
+                href="https://github.com/DataLabHell"
+                target="_blank"
+                rel="noopener"
+                aria-label="GitHub"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.216.694.825.576C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/data-lab-hell-gmbh"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer></footer>
+
+    <script src="cookie-consent.js"></script>
+  </body>
 </html>
