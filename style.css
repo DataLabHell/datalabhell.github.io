@@ -247,7 +247,7 @@ section.content-section h2 {
 /* ── TEAM GRID ───────────────────────────── */
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 2.5rem 2rem;
   margin-top: 3rem;
 }

@@ -132,18 +132,38 @@
       if (lockedSection) return;
       var headerH = header ? header.offsetHeight : 0;
       var scrollY = window.scrollY;
+      var maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+
+      // Build natural thresholds
+      var thresholds = [];
+      sections.forEach(function (sec) {
+        thresholds.push(sec.offsetTop - headerH - 8);
+      });
+
+      // Redistribute thresholds that exceed maxScroll evenly within the reachable range
+      var firstOver = -1;
+      for (var k = 0; k < thresholds.length; k++) {
+        if (thresholds[k] > maxScroll) { firstOver = k; break; }
+      }
+      if (firstOver !== -1) {
+        var base = firstOver > 0 ? thresholds[firstOver - 1] : 0;
+        var count = thresholds.length - firstOver;
+        var step = (maxScroll - base) / (count + 1);
+        for (var m = firstOver; m < thresholds.length; m++) {
+          thresholds[m] = base + step * (m - firstOver + 1);
+        }
+      }
+
+      // Each section active from its threshold until the next one
       var current = '';
-      // Each section is active from its own top until the next section's top
       for (var i = 0; i < sections.length; i++) {
-        var sec = sections[i];
-        var nextSec = sections[i + 1];
-        var secTop = sec.offsetTop - headerH - 8;
-        var nextTop = nextSec ? nextSec.offsetTop - headerH - 8 : Infinity;
-        if (scrollY >= secTop && scrollY < nextTop) {
-          current = sec.id;
+        var nextThreshold = i + 1 < sections.length ? thresholds[i + 1] : Infinity;
+        if (scrollY >= thresholds[i] && scrollY < nextThreshold) {
+          current = sections[i].id;
           break;
         }
       }
+
       navLinks.forEach(function (a) {
         a.classList.toggle('active', a.getAttribute('href') === '#' + current);
       });
