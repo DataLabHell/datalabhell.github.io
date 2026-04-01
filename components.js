@@ -112,19 +112,37 @@
   if (isIndex) {
     var sections = document.querySelectorAll('section[id], div.hero[id]');
     var navLinks = document.querySelectorAll('header nav a');
+    var lockedSection = null;
+    var lockTimer = null;
+
+    navLinks.forEach(function (a) {
+      a.addEventListener('click', function () {
+        var id = (a.getAttribute('href') || '').replace('#', '');
+        if (!id) return;
+        if (lockTimer) clearTimeout(lockTimer);
+        lockedSection = id;
+        navLinks.forEach(function (l) {
+          l.classList.toggle('active', l === a);
+        });
+        lockTimer = setTimeout(function () { lockedSection = null; }, 1200);
+      });
+    });
 
     function onScroll() {
+      if (lockedSection) return;
       var headerH = header ? header.offsetHeight : 0;
-      var atBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 10;
+      var scrollY = window.scrollY;
       var current = '';
-      sections.forEach(function (sec) {
-        if (window.scrollY >= sec.offsetTop - headerH - 8) {
+      // Each section is active from its own top until the next section's top
+      for (var i = 0; i < sections.length; i++) {
+        var sec = sections[i];
+        var nextSec = sections[i + 1];
+        var secTop = sec.offsetTop - headerH - 8;
+        var nextTop = nextSec ? nextSec.offsetTop - headerH - 8 : Infinity;
+        if (scrollY >= secTop && scrollY < nextTop) {
           current = sec.id;
+          break;
         }
-      });
-      // If at the bottom of the page, force the last section active
-      if (atBottom && sections.length) {
-        current = sections[sections.length - 1].id;
       }
       navLinks.forEach(function (a) {
         a.classList.toggle('active', a.getAttribute('href') === '#' + current);
