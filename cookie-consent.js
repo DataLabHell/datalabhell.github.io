@@ -14,18 +14,24 @@
 
   showBanner();
 
+
   function showBanner() {
     if (document.getElementById('cookie-banner')) return;
+    var lang = localStorage.getItem('dlh_lang') ||
+      ((navigator.language || 'de').toLowerCase().startsWith('de') ? 'de' : 'en');
+    var t = lang === 'en'
+      ? { title: 'Privacy Notice', body: 'This website uses only technically necessary cookies. No tracking or analytics cookies are used. For more information please see our <a href="datenschutz.html">Privacy Policy</a>.', btn: 'Got it' }
+      : { title: 'Datenschutzhinweis', body: 'Diese Website verwendet ausschließlich technisch notwendige Cookies. Es werden keine Tracking- oder Analyse-Cookies eingesetzt. Weitere Informationen finden Sie in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.', btn: 'Verstanden' };
   var banner = document.createElement('div');
   banner.id = 'cookie-banner';
   banner.innerHTML =
     '<div class="cc-inner">' +
       '<div class="cc-text">' +
-        '<strong>Datenschutzhinweis</strong>' +
-        '<p>Diese Website verwendet ausschließlich technisch notwendige Cookies. Es werden keine Tracking- oder Analyse-Cookies eingesetzt. Weitere Informationen finden Sie in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</p>' +
+        '<strong>' + t.title + '</strong>' +
+        '<p>' + t.body + '</p>' +
       '</div>' +
       '<div class="cc-actions">' +
-        '<button id="cc-accept">Verstanden</button>' +
+        '<button id="cc-accept">' + t.btn + '</button>' +
       '</div>' +
     '</div>';
 
