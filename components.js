@@ -225,7 +225,7 @@
       '    <a href="' + base + '#team">Team</a>',
       '    <a href="' + base + '#kooperationen">Collaborations</a>',
       '    <a href="' + base + '#contact">Contact</a>',
-      '    <a href="https://blog.datalabhell.at" target="_blank" rel="noopener">Blog</a>',
+      '    <a href="https://blog.datalabhell.at">Blog</a>',
       '  </nav>',
       '  <div class="header-right">',
       '    <button id="lang-toggle" class="lang-toggle">' + (currentLang === 'de' ? 'EN' : 'DE') + '</button>',
