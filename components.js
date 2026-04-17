@@ -234,6 +234,7 @@
       '    <a href="' + base + '#team">Team</a>',
       '    <a href="' + base + '#kooperationen">Collaborations</a>',
       '    <a href="' + base + '#contact">Contact</a>',
+      '    <a href="https://blog.datalabhell.at" class="nav-blog-mobile">Blog</a>',
       '  </nav>',
       '  <div class="header-right">',
       '    <a href="https://blog.datalabhell.at" class="nav-blog">Blog</a>',

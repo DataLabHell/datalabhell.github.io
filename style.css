@@ -907,6 +907,10 @@ button.btn-outline {
 }
 
 /* ── BLOG NAV LINK ───────────────────────── */
+.nav-blog-mobile {
+  display: none;
+}
+
 .nav-blog {
   display: inline-flex;
   align-items: center;
@@ -1014,6 +1018,10 @@ button.btn-outline {
 
   .nav-blog {
     display: none;
+  }
+
+  .nav-blog-mobile {
+    display: block;
   }
 
   #main-nav a:last-child {
