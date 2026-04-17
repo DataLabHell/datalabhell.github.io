@@ -185,7 +185,16 @@
     }
   };
 
-  var savedLang = localStorage.getItem('dlh_lang');
+  function getLang() {
+    var m = document.cookie.match(/(?:^|;\s*)dlh_lang=([^;]+)/);
+    return m ? m[1] : localStorage.getItem('dlh_lang');
+  }
+  function setLang(lang) {
+    document.cookie = 'dlh_lang=' + lang + '; path=/; domain=.datalabhell.at; max-age=31536000; SameSite=Lax';
+    localStorage.setItem('dlh_lang', lang);
+  }
+
+  var savedLang = getLang();
   var browserLang = (navigator.language || 'de').toLowerCase().startsWith('de') ? 'de' : 'en';
   var currentLang = savedLang || browserLang;
 
@@ -240,7 +249,7 @@
     var langBtn = document.getElementById('lang-toggle');
     langBtn.addEventListener('click', function () {
       currentLang = currentLang === 'de' ? 'en' : 'de';
-      localStorage.setItem('dlh_lang', currentLang);
+      setLang(currentLang);
       applyLang(currentLang);
     });
 
