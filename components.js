@@ -37,7 +37,7 @@
       legal_label: 'Rechtliches',
       ds_title: 'Datenschutzerklärung',
       ds_h_general: 'Allgemeines',
-      ds_p_general: 'Die Data Lab Hell GmbH (im Folgenden „wir" oder „uns") nimmt den Schutz Ihrer persönlichen Daten ernst. Diese Datenschutzerklärung informiert Sie über die Art, den Umfang und Zweck der Erhebung und Verwendung von personenbezogenen Daten auf unserer Website www.datalabhell.at (im Folgenden „Website").',
+      ds_p_general: 'Die Data Lab Hell GmbH (im Folgenden „wir" oder „uns") nimmt den Schutz Ihrer persönlichen Daten ernst. Diese Datenschutzerklärung informiert Sie über die Art, den Umfang und Zweck der Erhebung und Verwendung von personenbezogenen Daten auf unserer Website www.datalabhell.ac.at (im Folgenden „Website").',
       ds_h_controller: 'Verantwortliche Stelle',
       ds_p_controller: 'Verantwortlich für die Verarbeitung personenbezogener Daten ist:<br /><br />Data Lab Hell GmbH<br />Europastraße 2a<br />6170 Zirl, Österreich<br />E-Mail: <a href="mailto:office@datalabhell.at">office@datalabhell.at</a>',
       ds_h_collection: 'Datenerhebung und -verwendung',
@@ -78,7 +78,7 @@
       ds_h_updates: 'Aktualität und Änderungen',
       ds_p_updates: 'Diese Datenschutzerklärung ist aktuell gültig und hat den Stand März 2026. Durch die Weiterentwicklung unserer Website oder aufgrund geänderter gesetzlicher bzw. behördlicher Vorgaben kann es notwendig werden, diese Datenschutzerklärung zu ändern.',
       imp_title: 'Impressum',
-      imp_p_contact_main: 'E-Mail: <a href="mailto:office@datalabhell.at">office@datalabhell.at</a><br />T Office: <a href="tel:+436776175730">+43 677 617 573 00</a><br />T Geschäftsführung: <a href="tel:+436776175731">+43 677 617 573 01</a><br />Website: <a href="https://www.datalabhell.at" target="_blank" rel="noopener">www.datalabhell.at</a>',
+      imp_p_contact_main: 'E-Mail: <a href="mailto:office@datalabhell.at">office@datalabhell.at</a><br />T Office: <a href="tel:+436776175730">+43 677 617 573 00</a><br />T Geschäftsführung: <a href="tel:+436776175731">+43 677 617 573 01</a><br />Website: <a href="https://www.datalabhell.ac.at" target="_blank" rel="noopener">www.datalabhell.ac.at</a>',
       imp_h_branch: 'Zweigniederlassung',
       imp_h_register: 'Firmenbuch',
       imp_p_register: 'Firmenbuchnummer: FN 591704 d<br />Firmenbuchgericht: Innsbruck<br />Firmensitz: 6170 Zirl<br />UID: ATU78729468',
@@ -126,7 +126,7 @@
       legal_label: 'Legal',
       ds_title: 'Privacy Policy',
       ds_h_general: 'General',
-      ds_p_general: 'Data Lab Hell GmbH (hereinafter "we" or "us") takes the protection of your personal data seriously. This privacy policy informs you about the nature, scope and purpose of the collection and use of personal data on our website www.datalabhell.at (hereinafter "website").',
+      ds_p_general: 'Data Lab Hell GmbH (hereinafter "we" or "us") takes the protection of your personal data seriously. This privacy policy informs you about the nature, scope and purpose of the collection and use of personal data on our website www.datalabhell.ac.at (hereinafter "website").',
       ds_h_controller: 'Data Controller',
       ds_p_controller: 'The party responsible for the processing of personal data is:<br /><br />Data Lab Hell GmbH<br />Europastraße 2a<br />6170 Zirl, Austria<br />E-Mail: <a href="mailto:office@datalabhell.at">office@datalabhell.at</a>',
       ds_h_collection: 'Data Collection and Use',
@@ -167,7 +167,7 @@
       ds_h_updates: 'Currency and Changes',
       ds_p_updates: 'This privacy policy is currently valid as of March 2026. Due to the further development of our website or changes in legal or regulatory requirements, it may be necessary to amend this privacy policy.',
       imp_title: 'Legal Notice',
-      imp_p_contact_main: 'E-Mail: <a href="mailto:office@datalabhell.at">office@datalabhell.at</a><br />T Office: <a href="tel:+436776175730">+43 677 617 573 00</a><br />T Management: <a href="tel:+436776175731">+43 677 617 573 01</a><br />Website: <a href="https://www.datalabhell.at" target="_blank" rel="noopener">www.datalabhell.at</a>',
+      imp_p_contact_main: 'E-Mail: <a href="mailto:office@datalabhell.at">office@datalabhell.at</a><br />T Office: <a href="tel:+436776175730">+43 677 617 573 00</a><br />T Management: <a href="tel:+436776175731">+43 677 617 573 01</a><br />Website: <a href="https://www.datalabhell.ac.at" target="_blank" rel="noopener">www.datalabhell.ac.at</a>',
       imp_h_branch: 'Branch Office',
       imp_h_register: 'Company Register',
       imp_p_register: 'Registration Number: FN 591704 d<br />Commercial Court: Innsbruck<br />Registered Office: 6170 Zirl<br />VAT ID: ATU78729468',
@@ -190,7 +190,7 @@
     return m ? m[1] : localStorage.getItem('dlh_lang');
   }
   function setLang(lang) {
-    document.cookie = 'dlh_lang=' + lang + '; path=/; domain=.datalabhell.at; max-age=31536000; SameSite=Lax';
+    document.cookie = 'dlh_lang=' + lang + '; path=/; domain=.datalabhell.ac.at; max-age=31536000; SameSite=Lax';
     localStorage.setItem('dlh_lang', lang);
   }
 
@@ -234,10 +234,10 @@
       '    <a href="' + base + '#team">Team</a>',
       '    <a href="' + base + '#kooperationen">Collaborations</a>',
       '    <a href="' + base + '#contact">Contact</a>',
-      '    <a href="https://blog.datalabhell.at" class="nav-blog-mobile">Blog</a>',
+      '    <a href="https://blog.datalabhell.ac.at" class="nav-blog-mobile">Blog</a>',
       '  </nav>',
       '  <div class="header-right">',
-      '    <a href="https://blog.datalabhell.at" class="nav-blog">Blog</a>',
+      '    <a href="https://blog.datalabhell.ac.at" class="nav-blog">Blog</a>',
       '    <button id="lang-toggle" class="lang-toggle">' + (currentLang === 'de' ? 'EN' : 'DE') + '</button>',
       '    <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false">',
       '      <span></span><span></span><span></span>',

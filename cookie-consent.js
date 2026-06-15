@@ -6,11 +6,11 @@
     return m ? m[1] : localStorage.getItem(COOKIE_NAME);
   }
   function setConsent() {
-    document.cookie = COOKIE_NAME + '=1; path=/; domain=.datalabhell.at; max-age=31536000; SameSite=Lax';
+    document.cookie = COOKIE_NAME + '=1; path=/; domain=.datalabhell.ac.at; max-age=31536000; SameSite=Lax';
     localStorage.setItem(COOKIE_NAME, '1');
   }
   function revokeConsent() {
-    document.cookie = COOKIE_NAME + '=; path=/; domain=.datalabhell.at; max-age=0; SameSite=Lax';
+    document.cookie = COOKIE_NAME + '=; path=/; domain=.datalabhell.ac.at; max-age=0; SameSite=Lax';
     localStorage.removeItem(COOKIE_NAME);
   }
 
@@ -33,8 +33,8 @@
       ? document.cookie.match(/(?:^|;\s*)dlh_lang=([^;]+)/)[1]
       : localStorage.getItem('dlh_lang') || ((navigator.language || 'de').toLowerCase().startsWith('de') ? 'de' : 'en');
     var t = lang === 'en'
-      ? { title: 'Privacy Notice', body: 'This website uses only technically necessary cookies. No tracking or analytics cookies are used. For more information please see our <a href="https://datalabhell.at/datenschutz.html">Privacy Policy</a>.', btn: 'Got it' }
-      : { title: 'Datenschutzhinweis', body: 'Diese Website verwendet ausschließlich technisch notwendige Cookies. Es werden keine Tracking- oder Analyse-Cookies eingesetzt. Weitere Informationen finden Sie in unserer <a href="https://datalabhell.at/datenschutz.html">Datenschutzerklärung</a>.', btn: 'Verstanden' };
+      ? { title: 'Privacy Notice', body: 'This website uses only technically necessary cookies. No tracking or analytics cookies are used. For more information please see our <a href="https://datalabhell.ac.at/datenschutz.html">Privacy Policy</a>.', btn: 'Got it' }
+      : { title: 'Datenschutzhinweis', body: 'Diese Website verwendet ausschließlich technisch notwendige Cookies. Es werden keine Tracking- oder Analyse-Cookies eingesetzt. Weitere Informationen finden Sie in unserer <a href="https://datalabhell.ac.at/datenschutz.html">Datenschutzerklärung</a>.', btn: 'Verstanden' };
     var banner = document.createElement('div');
     banner.id = 'cookie-banner';
     banner.innerHTML =
